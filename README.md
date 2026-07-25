@@ -1,6 +1,12 @@
 # Sistema Web de Chamados
 
-Projeto pessoal desenvolvido para simular um sistema de abertura de chamados de suporte técnico.
+Sistema web desenvolvido para abertura de chamados de suporte técnico, permitindo que usuários registrem solicitações de atendimento de forma organizada.
+
+## Acesso ao projeto
+
+Você pode visualizar o sistema online:
+
+https://sabrinaellendev.github.io/sistema-de-chamados/
 
 ## Tecnologias utilizadas
 
@@ -17,7 +23,7 @@ Projeto pessoal desenvolvido para simular um sistema de abertura de chamados de 
 
 ## Objetivo
 
-Praticar desenvolvimento front-end e criar uma solução semelhante a sistemas utilizados em equipes de suporte técnico.
+Projeto pessoal desenvolvido para praticar conceitos de desenvolvimento front-end, criação de interfaces web e interação com elementos utilizando JavaScript.
 
 ## Demonstração do projeto
 
@@ -28,3 +34,4 @@ Praticar desenvolvimento front-end e criar uma solução semelhante a sistemas u
 ### Chamado enviado
 
 ![Mensagem de confirmação](img/tela%202.png)
+
