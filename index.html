@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Chamados</title> <!-- Título da Página -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <h1><i class="fa-solid fa-headset"></i> HelpDesk</h1>
+        <p class="subtitulo">
+            Abra seu chamado de suporte técnico de forma rápida, simples e organizada.   <!-- Subtítulos -->
+        </p> 
+        <p class="subtitulo1">
+            Preencha o formulário abaixo para registrar sua solicitação.                   
+        </p>
+
+
+        <form id="formChamado">                                         <!-- Início do formulário -->
+
+            <label for="solicitante">*Nome do solicitante:</label>
+            <input type="text" id="solicitante" required placeholder="Digite seu nome">
+
+            <label for="setor">*Setor do solicitante:</label>
+
+            <select id="setor" required>
+                <option value="">Escolha um setor</option>
+                <option value="Administrativo">Administrativo</option>
+                <option value="Comercial">Comercial</option>
+                <option value="Financeiro">Financeiro</option>
+                <option value="RH">RH</option>
+
+            </select>
+            <label for="categoria">*Categoria do problema:</label>
+            <select id="categoria" required>
+                <option value="">Escolha uma categoria:</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+                <option value="rede">Rede</option>
+                <option value="acesso">Acesso</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" placeholder="Ex.: Sistema instável">
+
+            <label for="descricao">*Descrição da solicitação:</label>
+            <textarea id="descricao" rows="5" placeholder="Descreva o problema..." required></textarea>            
+
+            <button type="submit"> Abrir Chamado </button>
+
+        </form>
+
+    </main>
+
+    <script src="script.js"></script> 
+
+</body>
+
+</html>
