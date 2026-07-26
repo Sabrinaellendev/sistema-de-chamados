@@ -1,6 +1,6 @@
 # Sistema Web de Chamados
 
-Sistema web desenvolvido para abertura de chamados de suporte técnico, permitindo que usuários registrem solicitações de atendimento de forma organizada.
+Sistema web para abertura de chamados de suporte técnico, desenvolvido com HTML, CSS e JavaScript. O projeto permite registrar solicitações de atendimento de forma simples e organizada.
 
 ## Acesso ao projeto
 
@@ -16,22 +16,33 @@ https://sabrinaellendev.github.io/sistema-de-chamados/
 
 ## Funcionalidades
 
-- Formulário para abertura de chamados
-- Validação de campos
+- Cadastro de chamados de suporte
+- Validação dos campos obrigatórios
+- Exibição dinâmica dos chamados na tela
 - Interface responsiva
-- Mensagem de confirmação após envio
+- Mensagem de confirmação após o envio
 
 ## Objetivo
 
-Projeto pessoal desenvolvido para praticar conceitos de desenvolvimento front-end, criação de interfaces web e interação com elementos utilizando JavaScript.
+Este projeto foi desenvolvido com o objetivo de praticar conceitos fundamentais de desenvolvimento Front-end, como:
+
+- Manipulação do DOM
+- Eventos em JavaScript
+- Arrays e objetos
+- Funções
+- Estruturação de interfaces com HTML e CSS
 
 ## Demonstração do projeto
 
 ### Tela inicial
 
-![Tela inicial do sistema](img/tela%20inicial.png)
+![Tela inicial do sistema](img/i1.png)
 
 ### Chamado enviado
 
-![Mensagem de confirmação](img/tela%202.png)
+![Mensagem de confirmação](img/testconfirm.png)
+
+### Chamados abertos
+
+![Chamados abertos](img/i3f.png)
 
