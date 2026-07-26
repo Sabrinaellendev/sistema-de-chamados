@@ -10,6 +10,7 @@ formulario.addEventListener("submit", function (event) {
     const solicitante = document.querySelector("#solicitante").value;
     const setor = document.querySelector("#setor").value;
     const categoria = document.querySelector("#categoria").value;
+    const prioridade = document.querySelector("#prioridade").value;
     const assunto = document.querySelector("#assunto").value;
     const descricao = document.querySelector("#descricao").value;
 
@@ -17,6 +18,7 @@ formulario.addEventListener("submit", function (event) {
         solicitante: solicitante,
         setor: setor,
         categoria: categoria,
+        prioridade: prioridade,
         assunto: assunto,
         descricao: descricao
     };
@@ -41,8 +43,10 @@ function exibirChamados() {
      <h3>${chamado.assunto}</h3>
      <p><strong>Solicitante:</strong> ${chamado.solicitante}</p>
      <p><strong>Setor:</strong> ${chamado.setor}</p>
+     <p><strong>Prioridade:</strong> ${chamado.prioridade}</p>
+     <p><strong>Status:</strong> Aberto</p>
      
-     </div>
+      </div>
 
      `;
 
