@@ -1,55 +1,50 @@
-const chamados = [];
 const formulario = document.querySelector("#formChamado");
-const listaChamados = document.querySelector("#listaChamados");
 
-formulario.addEventListener("submit", function (event) {
-
+formulario.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    const solicitante = document.querySelector("#solicitante").value;
-    const setor = document.querySelector("#setor").value;
-    const categoria = document.querySelector("#categoria").value;
-    const prioridade = document.querySelector("#prioridade").value;
-    const assunto = document.querySelector("#assunto").value;
-    const descricao = document.querySelector("#descricao").value;
-
     const chamado = {
-        solicitante: solicitante,
-        setor: setor,
-        categoria: categoria,
-        prioridade: prioridade,
-        assunto: assunto,
-        descricao: descricao
+        solicitante: document.querySelector("#solicitante").value,
+        setor: document.querySelector("#setor").value,
+        categoria: document.querySelector("#categoria").value,
+        prioridade: document.querySelector("#prioridade").value,
+        assunto: document.querySelector("#assunto").value,
+        descricao: document.querySelector("#descricao").value,
+        status: "Aberto"
     };
 
-    chamados.push(chamado);
 
-    exibirChamados();
+    fetch("http://localhost:3000/chamados", {
 
-    alert("Chamado enviado com sucesso!");
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(chamado)
+
+    })
+
+    .then(resposta => resposta.json())
+
+    .then(dados => {
+
+        console.log(dados);
+
+        alert("Chamado salvo!");
+
+        formulario.reset();
+
+    })
+
+    .catch(erro => {
+
+        console.log("Erro:", erro);
+
+        alert("Erro ao salvar chamado");
+
+    });
 
 });
-
-function exibirChamados() {
-
-    listaChamados.innerHTML = "";
-
-    for (const chamado of chamados) {
-
-        listaChamados.innerHTML += `
-     <div class="card">
-
-     <h3>${chamado.assunto}</h3>
-     <p><strong>Solicitante:</strong> ${chamado.solicitante}</p>
-     <p><strong>Setor:</strong> ${chamado.setor}</p>
-     <p><strong>Prioridade:</strong> ${chamado.prioridade}</p>
-     <p><strong>Status:</strong> Aberto</p>
-     
-      </div>
-
-     `;
-
-    }
-
-};
