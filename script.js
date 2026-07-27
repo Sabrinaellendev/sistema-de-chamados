@@ -5,7 +5,7 @@ function mostrarToast(mensagem, tipo = 'sucesso') {
     toast.textContent = mensagem;
     
     if (tipo === 'erro') {
-        toast.style.backgroundColor = '#ef4444';
+        toast.style.backgroundColor = '#fd0c0c';
     } else {
         toast.style.backgroundColor = '#10b981';
     }
@@ -59,9 +59,9 @@ formulario.addEventListener("submit", function (event) {
 
         .catch(erro => {
 
-            console.log("Erro:", erro);
+            console.log("Erro", erro);
 
-            mostrarToast("Erro ao registrar chamado");
+            mostrarToast("Erro ao registrar chamado", "erro");
 
         });
 
