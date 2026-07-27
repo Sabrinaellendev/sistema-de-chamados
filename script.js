@@ -1,6 +1,24 @@
 const formulario = document.querySelector("#formChamado");
 
-formulario.addEventListener("submit", function(event) {
+function mostrarToast(mensagem, tipo = 'sucesso') {
+    const toast = document.getElementById('toast');
+    toast.textContent = mensagem;
+    
+    if (tipo === 'erro') {
+        toast.style.backgroundColor = '#ef4444';
+    } else {
+        toast.style.backgroundColor = '#10b981';
+    }
+    
+    toast.classList.add('show');
+
+    // A forma correta e limpa do temporizador:
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
+formulario.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -27,24 +45,24 @@ formulario.addEventListener("submit", function(event) {
 
     })
 
-    .then(resposta => resposta.json())
+        .then(resposta => resposta.json())
 
-    .then(dados => {
+        .then(dados => {
 
-        console.log(dados);
+            console.log(dados);
 
-        alert("Chamado salvo!");
+            mostrarToast("Chamado registrado com sucesso!");
+            
+            formulario.reset();
 
-        formulario.reset();
+        })
 
-    })
+        .catch(erro => {
 
-    .catch(erro => {
+            console.log("Erro:", erro);
 
-        console.log("Erro:", erro);
+            mostrarToast("Erro ao registrar chamado");
 
-        alert("Erro ao salvar chamado");
-
-    });
+        });
 
 });

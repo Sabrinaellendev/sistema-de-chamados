@@ -1,14 +1,14 @@
 # Sistema Web de Chamados
 
-Sistema web de abertura e registro de chamados de suporte técnico, desenvolvido com HTML, CSS, JavaScript, Node.js, Express e MySQL.
+Sistema web de abertura e registro de chamados de suporte técnico, desenvolvido com HTML, CSS, JavaScript, Node.js, Express.js e MySQL.
 
-O projeto simula um sistema de Help Desk, permitindo que usuários registrem solicitações de suporte de forma organizada, informando dados como categoria, prioridade e descrição do problema.
+O projeto consiste em um sistema de Help Desk, permitindo que usuários registrem solicitações de suporte de forma organizada, informando dados como setor, categoria, prioridade, assunto e descrição do problema.
 
-Os chamados são enviados para uma API desenvolvida em Node.js e armazenados em um banco de dados MySQL.
+Os chamados são enviados para uma API desenvolvida em Node.js com Express.js e armazenados em um banco de dados MySQL.
 
 ## Acesso ao projeto
 
-Você pode visualizar a interface do sistema online:
+Você pode visualizar a interface do sistema:
 
 https://sabrinaellendev.github.io/sistema-de-chamados/
 
@@ -23,7 +23,7 @@ https://sabrinaellendev.github.io/sistema-de-chamados/
 ### Back-end
 
 - Node.js
-- Express
+- Express.js
 - API REST
 
 ### Banco de dados
@@ -34,20 +34,20 @@ https://sabrinaellendev.github.io/sistema-de-chamados/
 
 - Abertura de chamados de suporte técnico
 - Validação de campos obrigatórios
-- Seleção de categoria do problema
-- Definição de prioridade do chamado
-- Geração automática de status inicial
-- Envio dos dados para uma API
+- Seleção de setor, categoria e prioridade
+- Geração automática de status inicial do chamado
+- Envio dos dados para uma API REST
 - Armazenamento dos chamados em banco de dados MySQL
-- Organização das informações cadastradas
+- Notificação visual de confirmação após o cadastro
+- Limpeza automática do formulário após envio
 
 ## Funcionamento
 
-O usuário preenche o formulário de abertura de chamado.
+O usuário preenche o formulário de abertura de chamado com as informações da solicitação.
 
-O JavaScript captura os dados inseridos e envia uma requisição para a API desenvolvida em Node.js.
+O JavaScript do front-end captura os dados inseridos e realiza uma requisição utilizando Fetch para a API desenvolvida em Node.js.
 
-A API recebe as informações enviadas pelo sistema e realiza a inserção dos dados no banco de dados MySQL.
+A API recebe as informações, realiza a inserção dos dados no banco de dados MySQL e registra o chamado.
 
 Cada chamado contém:
 
@@ -67,28 +67,28 @@ Este projeto foi desenvolvido com o objetivo de praticar conceitos de desenvolvi
 
 Conceitos aplicados:
 
+- Estruturação de páginas com HTML
+- Estilização de interfaces com CSS
 - Manipulação do DOM
 - Eventos em JavaScript
 - Objetos e arrays
 - Template Strings
 - Consumo de API utilizando Fetch
-- Criação de API REST com Express
+- Criação de API REST com Express.js
 - Integração com banco de dados MySQL
 - Operações SQL de inserção de dados
-- Organização de projetos Front-end e Back-end
-
+- Organização de projetos front-end e back-end
 
 ## Demonstração do projeto
 
 ### Tela inicial
 
-![Tela inicial do sistema](img/inicialtela.png)
+![Tela inicial do sistema](img/SS1.png)
 
-### Chamado enviado
+### Preenchimento do chamado
 
-![Mensagem de confirmação](img/confirmaçãook.png)
+![Preenchimento do chamado](img/RR2.png)
 
-### Chamados abertos
+### Confirmação
 
-![Chamados abertos](img/card%20chamados.png)
-
+![Confirmação](img/FF3.png)
